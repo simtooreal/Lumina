@@ -1,0 +1,6 @@
+framework module Pods_LuminaSample {
+  umbrella header "Pods-LuminaSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

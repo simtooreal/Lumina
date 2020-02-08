@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13D34E6ADA00BE147C7CB9DA /* Pods_LuminaSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D75BFBB59416F99B622B5A /* Pods_LuminaSample.framework */; };
 		534C1E9E1F7C3C59001127BC /* ResolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C1E9D1F7C3C59001127BC /* ResolutionViewController.swift */; };
 		5365BFD41F79829800B8F338 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365BFD31F79829800B8F338 /* ImageViewController.swift */; };
 		5365BFDA1F79AAA800B8F338 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5365BFD91F79AA9B00B8F338 /* MobileNet.mlmodel */; };
@@ -18,7 +19,6 @@
 		53B828FE1EAAA09000E3A624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B828FD1EAAA09000E3A624 /* Assets.xcassets */; };
 		53B829011EAAA09000E3A624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B828FF1EAAA09000E3A624 /* LaunchScreen.storyboard */; };
 		78FC9B5C20550387005F8D5B /* Lumina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC9B5B20550387005F8D5B /* Lumina.framework */; };
-		78FC9B5D20550387005F8D5B /* Lumina.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78FC9B5B20550387005F8D5B /* Lumina.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				78FC9B5D20550387005F8D5B /* Lumina.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +48,10 @@
 		53B828FD1EAAA09000E3A624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53B829001EAAA09000E3A624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53B829021EAAA09000E3A624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D75BFBB59416F99B622B5A /* Pods_LuminaSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuminaSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB64B90FAF27A184230FC20 /* Pods-LuminaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuminaSample.debug.xcconfig"; path = "Target Support Files/Pods-LuminaSample/Pods-LuminaSample.debug.xcconfig"; sourceTree = "<group>"; };
 		78FC9B5B20550387005F8D5B /* Lumina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lumina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B156827D3098671B99D93 /* Pods-LuminaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuminaSample.release.xcconfig"; path = "Target Support Files/Pods-LuminaSample/Pods-LuminaSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FC9B5C20550387005F8D5B /* Lumina.framework in Frameworks */,
+				13D34E6ADA00BE147C7CB9DA /* Pods_LuminaSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 				53B828F51EAAA09000E3A624 /* LuminaSample */,
 				53B829081EAAA16D00E3A624 /* Frameworks */,
 				53B828F41EAAA09000E3A624 /* Products */,
+				8C3E4A9D99985FE96568D30D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +108,18 @@
 				53B2CE261FF5D434008287E6 /* Lumina.framework */,
 				5365BFD91F79AA9B00B8F338 /* MobileNet.mlmodel */,
 				5373B3F01FC61BBF00C197BD /* SqueezeNet.mlmodel */,
+				58D75BFBB59416F99B622B5A /* Pods_LuminaSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C3E4A9D99985FE96568D30D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CB64B90FAF27A184230FC20 /* Pods-LuminaSample.debug.xcconfig */,
+				E42B156827D3098671B99D93 /* Pods-LuminaSample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,10 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53B829051EAAA09000E3A624 /* Build configuration list for PBXNativeTarget "LuminaSample" */;
 			buildPhases = (
+				DF4391810E6060D77F3EB0BD /* [CP] Check Pods Manifest.lock */,
 				53B828EF1EAAA09000E3A624 /* Sources */,
 				53B828F01EAAA09000E3A624 /* Frameworks */,
 				53B828F11EAAA09000E3A624 /* Resources */,
 				78FC9B5E20550387005F8D5B /* Embed Frameworks */,
+				456967DD44F9D8A8FEC99E38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +157,7 @@
 				TargetAttributes = {
 					53B828F21EAAA09000E3A624 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = RQ632LL2X3;
+						DevelopmentTeam = 28Z8AZJ86V;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -177,6 +193,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		456967DD44F9D8A8FEC99E38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LuminaSample/Pods-LuminaSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Lumina/Lumina.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lumina.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuminaSample/Pods-LuminaSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF4391810E6060D77F3EB0BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuminaSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53B828EF1EAAA09000E3A624 /* Sources */ = {
@@ -328,9 +387,10 @@
 		};
 		53B829061EAAA09000E3A624 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB64B90FAF27A184230FC20 /* Pods-LuminaSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RQ632LL2X3;
+				DEVELOPMENT_TEAM = 28Z8AZJ86V;
 				INFOPLIST_FILE = LuminaSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -342,9 +402,10 @@
 		};
 		53B829071EAAA09000E3A624 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E42B156827D3098671B99D93 /* Pods-LuminaSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RQ632LL2X3;
+				DEVELOPMENT_TEAM = 28Z8AZJ86V;
 				INFOPLIST_FILE = LuminaSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
